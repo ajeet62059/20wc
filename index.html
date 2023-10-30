@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Open Multiple Tabs and Search Example</title>
+  </head>
+  <body>
+    <button onclick="openTabs()">Open Multiple Tabs and Search</button>
+
+    <script>
+      function openTabs() {
+        // URLs to open in new tabs
+        const urls = [
+          "https://www.bing.com/search?q=What+are+the+latest+digital+marketing+trends",
+          "https://www.bing.com/search?q=How+to+create+an+effective+social+media+marketing+strategy",
+          "https://www.bing.com/search?q=What+are+the+best+practices+for+email+marketing",
+          "https://www.bing.com/search?q=How+to+optimize+your+website+for+search+engines+(SEO)",
+          "https://www.bing.com/search?q=What+is+influencer+marketing+and+how+does+it+work",
+          "https://www.bing.com/search?q=How+to+measure+the+ROI+of+your+marketing+campaigns",
+          "https://www.bing.com/search?q=What+is+content+marketing+and+why+is+it+important",
+          "https://www.bing.com/search?q=How+to+use+video+marketing+to+promote+your+brand",
+          "https://www.bing.com/search?q=What+are+the+key+principles+of+branding+and+brand+identity",
+          "https://www.bing.com/search?q=How+to+create+compelling+and+engaging+marketing+copy",
+          "https://www.bing.com/search?q=What+is+the+role+of+market+research+in+marketing",
+          "https://www.bing.com/search?q=How+to+use+social+media+advertising+effectively",
+          "https://www.bing.com/search?q=What+are+the+benefits+of+content+syndication+in+B2B+marketing",
+          "https://www.bing.com/search?q=How+to+run+successful+pay-per-click+(PPC)+advertising+campaigns",
+          "https://www.bing.com/search?q=What+are+the+latest+trends+in+influencer+marketing",
+          "https://www.bing.com/search?q=How+to+create+a+customer-centric+marketing+strategy",
+          "https://www.bing.com/search?q=What+are+the+best+tools+for+marketing+analytics+and+reporting",
+          "https://www.bing.com/search?q=How+to+build+an+effective+email+marketing+list",
+          "https://www.bing.com/search?q=What+are+the+ethical+considerations+in+marketing",
+          "https://www.bing.com/search?q=What+is+marketing",
+        ];
+
+        // Function to open tabs with a delay
+        function openTabWithDelay(index) {
+          if (index < urls.length) {
+            window.open(urls[index], "_blank");
+            setTimeout(function () {
+              openTabWithDelay(index + 1);
+            }, 2000); // Open the next tab after a 1-second delay
+          }
+        }
+
+        openTabWithDelay(0); // Start opening tabs from the first URL
+      }
+    </script>
+  </body>
+</html>
